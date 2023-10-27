@@ -15,6 +15,9 @@ module.exports = {
       screens: {
         "2xl": "1320px",
       },
+      backgroundImage: {
+        'bg-about' : "url('/src/img/bg-about.jpg')",
+      },
     },
   },
   plugins: [],
