@@ -654,6 +654,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 300px;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-9 {
   height: 2.25rem;
 }
@@ -802,9 +806,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(51 65 85 / var(--tw-border-opacity));
 }
 
-.bg-\[\#6ee7b7\] {
+.bg-\[\#fed7aa\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(110 231 183 / var(--tw-bg-opacity));
+  background-color: rgb(254 215 170 / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -834,6 +838,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-dark {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#059669\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(5 150 105 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#a7f3d0\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(167 243 208 / var(--tw-bg-opacity));
 }
 
 .fill-current {
@@ -1086,7 +1100,7 @@ body {
   --tw-bg-opacity: 0.7;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  box-shadow: inset 0 -1px 0 0 rgba(15, 202, 93, 0.2);
+  box-shadow: inset 0 -1px 0 0 rgba(251, 146, 60, 0.2);
 }
 
 /* navbar fix */
