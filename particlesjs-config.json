@@ -8,7 +8,7 @@
       }
     },
     "color": {
-      "value": "#389d29"
+      "value": "#059669"
     },
     "shape": {
       "type": "circle",
@@ -49,12 +49,12 @@
       "enable": true,
       "distance": 150,
       "color": "#059669",
-      "opacity": 0.9610082709728236,
+      "opacity": 0.4,
       "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 2,
       "direction": "none",
       "random": false,
       "straight": false,
@@ -71,7 +71,7 @@
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": false,
+        "enable": true,
         "mode": "repulse"
       },
       "onclick": {
