@@ -576,6 +576,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 40;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -1196,6 +1200,10 @@ body {
 @media (min-width: 1024px) {
   .lg\:static {
     position: static;
+  }
+
+  .lg\:z-40 {
+    z-index: 40;
   }
 
   .lg\:mx-auto {
