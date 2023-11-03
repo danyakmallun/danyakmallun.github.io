@@ -22,10 +22,8 @@ window.onscroll = function () {
 
 // btc countdown
 var nhiframe = document.getElementById('nhiframe');
-							window.addEventListener('message', function(e) {
-								// message that was passed from iframe page
-								// check message content if you have other messages too
-								let message = e.data;
-								nhiframe.style.height = message.height + 'px';
-							} , false);
+	window.addEventListener('message', function(e) {
+	let message = e.data;
+	nhiframe.style.height = message.height + 'px';
+} , false);
 // btc countdown
