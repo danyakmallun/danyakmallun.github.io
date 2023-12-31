@@ -576,6 +576,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 10;
 }
 
+.z-40 {
+  z-index: 40;
+}
+
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -692,6 +696,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-5 {
   height: 1.25rem;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .w-\[590px\] {
@@ -895,6 +903,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-dark {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#a7f3d0\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(167 243 208 / var(--tw-bg-opacity));
 }
 
 .fill-current {
