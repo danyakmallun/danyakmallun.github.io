@@ -25,3 +25,14 @@ window.onscroll = function () {
       var dropdownMenu = document.getElementById('dropdown-menu');
       dropdownMenu.classList.toggle('hidden');
     });
+
+
+// Tombol Sukses
+
+const btnX = document.querySelector('.btn-x')
+const btnSukses = document.querySelector('.btn-sukses')
+
+btnX.addEventListener("click", function(){
+  btnSukses.classList.toggle('hidden')
+  btnX.classList.toggle('hidden')
+})
