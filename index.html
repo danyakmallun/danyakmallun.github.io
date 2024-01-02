@@ -63,20 +63,6 @@
                 </li>
                 <li class="group">
                   <a
-                    href="#about"
-                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
-                    >Tentang saya</a
-                  >
-                </li>
-                <li class="group">
-                  <a
-                    href="#portfolio"
-                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
-                    >Album</a
-                  >
-                </li>
-                <li class="group">
-                  <a
                     href="#tugassti"
                     class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
                     >Tugas STI</a
@@ -90,11 +76,22 @@
                   >
                 </li>
                 <li class="group">
-                  <a
-                    href="#contact"
-                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
-                    >Contact</a
-                  >
+                  <div class="relative inline-block text-left py-2 mx-8">
+                    <button type="button" class="inline-flex justify-center items-center px-4 py-2 border shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-indigo-500" id="options-menu">
+                      Menu
+                      <svg class="w-5 h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </button>
+                
+                    <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden" id="dropdown-menu">
+                      <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                        <a href="#about" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">About</a>
+                        <a href="#portfolio" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Portfolio</a>
+                        <a href="#contact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Contact</a>
+                      </div>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </nav>

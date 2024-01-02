@@ -19,3 +19,9 @@ window.onscroll = function () {
   }
 };
 // navbar scrol
+
+// Toggle dropdown menu
+    document.getElementById('options-menu').addEventListener('click', function () {
+      var dropdownMenu = document.getElementById('dropdown-menu');
+      dropdownMenu.classList.toggle('hidden');
+    });
