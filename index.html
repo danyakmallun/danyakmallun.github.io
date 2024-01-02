@@ -619,18 +619,14 @@
         </div>
 
         <!-- Tombol jika kirim sukses -->
-          <div class="tombol-sukses flex justify-center w-full lg:w-2/3">
+          <div class="tombol-sukses w-60 p-4 lg:w-2/3 lg:mx-auto flex justify-center">
             <div class="hidden btn-sukses">
-              <div id="app" class="w-full lg:w-2/3 lg:mx-auto flex justify-center">
-                <div class="flex items-center">
-                  <div class="bg-green-300 text-green-800 p-3 mr-0">
+                  <div class="bg-green-300 text-green-800 p-3 mr-0 w-full">
                     Formulir berhasil dikirim!
                   </div>
-                </div>
-              </div>
             </div>
-            <div id="app" class=" lg:mx-auto flex justify-center">
-                <button type="button" class="hidden btn-x bg-red-700 hover:text-gray-900 p-3 mr-4 focus:outline-none text-white">X</button>
+            <div >
+                <button type="button" class="hidden btn-x bg-red-700 p-3 hover:text-gray-900 mr-0 focus:outline-none text-white">Close</button>
             </div>
           </div>
  
@@ -872,6 +868,24 @@
     <script src="dist/js/script.js"></script>
     <script src="/dist/js/particles.js"></script>
     <script src="/dist/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          loading: false,
+        },
+        methods: {
+          simulateLoading() {
+            // Simulate an asynchronous action
+            this.loading = true;
+            setTimeout(() => {
+              this.loading = false;
+            }, 2000); // You can adjust the timeout value based on your needs
+          },
+        },
+      });
+    </script>
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbx8hHUj-_dkrIZnULEVXOPlbCe7cqZNiWQOT1D4KhKCYehryLR_PAZprxIXhi7vtFnRnA/exec'
       
@@ -887,6 +901,7 @@
 
         // Ketika tombol submit diklik
         // tampilkan tombol loading, hilangkan tombol submit
+
         tmblLoading.classList.toggle('hidden')
         tmblKirim.classList.toggle('hidden')
 
@@ -896,38 +911,14 @@
             tmblLoading.classList.toggle('hidden')
             tmblKirim.classList.toggle('hidden')
 
-            tmblSukses.classList.toggle('hidden')
             tmblX.classList.toggle('hidden')
+            tmblSukses.classList.toggle('hidden')
 
             form.reset()
             console.log('Success!', response)
           })
           .catch(error => console.error('Error!', error.message))
       })
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script>
-      new Vue({
-        el: '#app',
-        data: {
-          loading: false,
-        },
-        methods: {
-          simulateLoading() {
-            // Simulate an asynchronous action
-            this.loading = true;
-            setTimeout(() => {
-              this.loading = false;
-            }, 20000); // You can adjust the timeout value based on your needs
-          },
-        },
-          closeSuccess() {
-            // Logika penutupan pesan sukses
-            
-            console.log('Closing success message');
-            // Anda dapat menambahkan logika lainnya sesuai kebutuhan
-        },
-      });
     </script>
   </body>
 </html>
