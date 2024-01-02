@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["index.html"],
+  content: ["index.html","./materi/materi.html"],
   theme: {
     container: {
       center: true,
