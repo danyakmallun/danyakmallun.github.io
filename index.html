@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="scroll-smooth dark to-dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="dist/output.css" />
+    <link rel="stylesheet" href="/src/output.css" />
     <script
       src="https://kit.fontawesome.com/7abfc2f12b.js"
       crossorigin="anonymous"
@@ -682,17 +682,19 @@
               </label
               >
             </div>
-            <div class="w-full px-4 mb-8">
+            <div class="w-full px-4 mb-3">
               <label for="email" >
                 <span class="text-base font-bold text-primary">Email</span>
                 <input
                   placeholder="Masukkan Email ..."
                   name="email"
-                  required
                   type="email"
                   id="email"
-                  class="peer w-full bg-slate-200 p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary invalid:text-pink-700 focus:invalid:text-pink-700 invalid:border-pink-700"
+                  class="peer w-full bg-slate-200 p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1  focus:border-primary invalid:border-pink-700 invalid:text-pink-700 focus:invalid:border-pink-700 focus:invalid:ring-pink-700"
                 />
+                <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
+                  Mohon isi dengan Email yang benar.
+                </p>
               </label>
             </div>
 
