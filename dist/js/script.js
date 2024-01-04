@@ -29,10 +29,10 @@ window.onscroll = function () {
 
 // Tombol Sukses
 
-// const btnX = document.querySelector('.btn-x')
-// const btnSukses = document.querySelector('.btn-sukses')
+const btnX = document.querySelector('.btn-x')
+const btnSukses = document.querySelector('.btn-sukses')
 
-// btnX.addEventListener("click", function(){
-//   btnSukses.classList.toggle('hidden')
-//   btnX.classList.toggle('hidden')
-// })
+btnX.addEventListener("click", function(){
+  btnSukses.classList.toggle('hidden')
+  btnX.classList.toggle('hidden')
+})
