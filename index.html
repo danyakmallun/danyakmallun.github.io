@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -669,40 +669,46 @@
         <form name="submit-to-google-sheet">
           <div class="w-full lg:w-2/3 lg:mx-auto">
             <div class="w-full px-4 mb-8">
-              <label for="name" class="text-base font-bold text-primary"
-                >Nama</label
+              <label for="name">
+                <span class="text-base font-bold text-primary">Nama</span>
+                <input
+                  placeholder="Masukkan Nama ..."
+                  name="nama"
+                  required
+                  type="text"
+                  id="name"
+                  class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+                />
+              </label
               >
-              <input
-                name="nama"
-                required
-                type="text"
-                id="name"
-                class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
-              />
             </div>
             <div class="w-full px-4 mb-8">
-              <label for="name" class="text-base font-bold text-primary"
-                >Email</label
-              >
-              <input
-                name="email"
-                required
-                type="email"
-                id="Email"
-                class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
-              />
+              <label for="email" >
+                <span class="text-base font-bold text-primary">Email</span>
+                <input
+                  placeholder="Masukkan Email ..."
+                  name="email"
+                  required
+                  type="email"
+                  id="email"
+                  class="peer w-full bg-slate-200 p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary invalid:text-pink-700 focus:invalid:text-pink-700 invalid:border-pink-700"
+                />
+              </label>
             </div>
+
             <div class="w-full px-4 mb-8">
-              <label for="name" class="text-base font-bold text-primary"
-                >Pesan</label
+              <label for="pesan">
+                <span class="text-base font-bold text-primary">Pesan</span>
+                  <textarea
+                  required
+                  placeholder="Masukkan Pesan ..."
+                  name="pesan"
+                  type="text"
+                  id="pesan"
+                  class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"></textarea>
+                </label
               >
-              <textarea
-                required
-                name="pesan"
-                type="text"
-                id="name"
-                class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32"
-              ></textarea>
+              
             </div>
             <div class="w-full">
               <button

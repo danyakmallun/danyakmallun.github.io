@@ -20,7 +20,7 @@ Website Portofolio ini adalah proyek pribadi yang saya buat untuk memamerkan kar
 
 - **Particles.js**: Library JavaScript untuk menciptakan efek animasi partikel yang menarik.
 
-## **Cara Menjalankan Website ini di localhost**
+<!-- ## **Cara Menjalankan Website ini di localhost**
 
 Jika Anda ingin menjalankan website ini secara lokal, ikuti langkah-langkah berikut:
 
@@ -35,7 +35,7 @@ Jika Anda ingin menjalankan website ini secara lokal, ikuti langkah-langkah beri
 3. Jalankan tailwindCSS
    ``` javascript
    npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
-   ```   
+   ```    -->
 
 ## **Kredit**
 
