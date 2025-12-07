@@ -64,7 +64,18 @@
         <!-- Dark Mode Toggle (Mobile) -->
         <button id="theme-toggle-mobile"
           class="text-secondary dark:text-slate-300 hover:text-primary transition focus:outline-none cursor-pointer">
-          <!-- Icons will be cloned by JS or we can duplicate here if needed, but for now let's reuse the main toggle or just keep the button structure -->
+          <!-- Sun Icon -->
+          <svg id="theme-toggle-mobile-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z"
+              fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+          <!-- Moon Icon -->
+          <svg id="theme-toggle-mobile-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
         </button>
 
         <button id="mobile-menu-btn" class="text-dark dark:text-white focus:outline-none cursor-pointer">
@@ -151,7 +162,7 @@
           <div class="relative h-[50vh] md:h-[80vh] max-h-[800px] overflow-hidden rounded-2xl">
             <!-- Gradient Fade Top -->
             <div
-              class="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-light via-light/90 to-transparent dark:from-dark dark:via-dark/90 z-20 pointer-events-none">
+              class="absolute top-0 left-0 w-full h-52 bg-gradient-to-b from-light via-light/90 to-transparent dark:from-dark dark:via-dark/90 z-30 scale-125 pointer-events-none">
             </div>
 
             <div class="grid grid-cols-2 gap-4 md:gap-6">
@@ -196,7 +207,7 @@
 
             <!-- Gradient Fade Bottom -->
             <div
-              class="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-light via-light/90 to-transparent dark:from-dark dark:via-dark/90 z-20 pointer-events-none">
+              class="absolute bottom-0 left-0 w-full h-52 bg-gradient-to-t from-light via-light/90 to-transparent dark:from-dark dark:via-dark/90 z-30 scale-125 pointer-events-none">
             </div>
           </div>
         </div>
@@ -817,17 +828,29 @@
     var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
     var themeToggleBtn = document.getElementById('theme-toggle');
 
+    var themeToggleMobileDarkIcon = document.getElementById('theme-toggle-mobile-dark-icon');
+    var themeToggleMobileLightIcon = document.getElementById('theme-toggle-mobile-light-icon');
+    var themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
+
     // Function to set theme
     function setTheme(isDark) {
       if (isDark) {
         document.documentElement.classList.add('dark');
         themeToggleLightIcon.classList.remove('hidden');
         themeToggleDarkIcon.classList.add('hidden');
+
+        if (themeToggleMobileLightIcon) themeToggleMobileLightIcon.classList.remove('hidden');
+        if (themeToggleMobileDarkIcon) themeToggleMobileDarkIcon.classList.add('hidden');
+
         localStorage.setItem('color-theme', 'dark');
       } else {
         document.documentElement.classList.remove('dark');
         themeToggleDarkIcon.classList.remove('hidden');
         themeToggleLightIcon.classList.add('hidden');
+
+        if (themeToggleMobileDarkIcon) themeToggleMobileDarkIcon.classList.remove('hidden');
+        if (themeToggleMobileLightIcon) themeToggleMobileLightIcon.classList.add('hidden');
+
         localStorage.setItem('color-theme', 'light');
       }
     }
@@ -840,9 +863,17 @@
       setTheme(false);
     }
 
-    // Event Listener
+    // Event Listener for Desktop
     if (themeToggleBtn) {
       themeToggleBtn.addEventListener('click', function () {
+        var isDark = document.documentElement.classList.contains('dark');
+        setTheme(!isDark);
+      });
+    }
+
+    // Event Listener for Mobile
+    if (themeToggleMobileBtn) {
+      themeToggleMobileBtn.addEventListener('click', function () {
         var isDark = document.documentElement.classList.contains('dark');
         setTheme(!isDark);
       });
